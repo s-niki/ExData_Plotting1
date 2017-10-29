@@ -14,18 +14,26 @@
   
 # Creating plots
   with(dateData, {
+  
+	# Topleft plot
     plot(Global_active_power~Datetime, type="l", 
-         ylab="Global Active Power (kilowatts)", xlab="")
+         ylab="Global Active Power", xlab="")
+		 
+	# Topright plot
     plot(Voltage~Datetime, type="l", 
-         ylab="Voltage (volt)", xlab="")
+         ylab="Voltage", xlab="")
+		 
+	# Bottomleft plot
     plot(Sub_metering_1~Datetime, type="l", 
-         ylab="Global Active Power (kilowatts)", xlab="")
+         ylab="Energy sub metering", xlab="")
     lines(Sub_metering_2~Datetime,col='Red')
     lines(Sub_metering_3~Datetime,col='Blue')
     legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",
            legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+		   
+	# Bottomright plot
     plot(Global_reactive_power~Datetime, type="l", 
-         ylab="Global Rective Power (kilowatts)",xlab="")
+         ylab="Global_rective_power",xlab="")
   })
 
 # Creating a png
