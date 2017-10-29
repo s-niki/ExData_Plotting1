@@ -11,7 +11,6 @@
 # Creating plot
   plot(dateData$Global_active_power ~ dateData$DateTime, type="l", xlab= "", ylab="Global Active power (kilowatts)")
 
-
 # Creating a png
   dev.copy(png, "plot2.png")
   dev.off()
